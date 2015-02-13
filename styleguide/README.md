@@ -159,35 +159,35 @@ Use your own judgment to choose between the options.
 
 #### Use a consistent class layout
 
-See [Ruby Style Guide on class layout](https://github.com/bbatsov/ruby-style-guide#consistent-classes)
+(Based on [bbatsov's styleguide](https://github.com/bbatsov/ruby-style-guide#consistent-classes).)
 
 ```ruby
 class Person
-  # extend and include go first
+  # extend and include go first.
   extend SomeModule
   include AnotherModule
 
-  # inner classes
+  # Inner classes.
   CustomErrorKlass = Class.new(StandardError)
 
-  # constants are next
+  # Constants are next.
   SOME_CONSTANT = 20
 
-  # afterwards we have attribute macros
+  # Then attribute macros.
   attr_reader :name
 
-  # followed by other macros (if any)
+  # Followed by other macros (if any).
   validates :name
 
-  # public class methods are next in line
+  # Public class methods.
   def self.some_method
   end
 
-  # followed by public instance methods
+  # Public instance methods.
   def some_method
   end
 
-  # protected and private methods are grouped near the end
+  # Protected and private methods at the end.
   protected
 
   def some_protected_method
